@@ -1,0 +1,27 @@
+from collections import Counter
+import string
+import re
+
+
+WordCount = 0
+numSentences = 0
+numSentences1 = 0
+numLetters = 0
+SentenceLengh = 0
+numLines = 0
+
+#re.split("(?&lt;=[.!?]) +", SentenceLengh)
+
+with open('pysentence.txt', 'r') as file:
+    for line in file:
+        
+        Words = line.split()
+        numLines += 1
+        WordCount = len(Words)
+        numLetters += len(line)
+        numSentences = line #.split(',')
+        numSentences1 = len(numSentences.split("."))
+       
+        print("Paragraph Analysis" "\n" "---------------" "\n" "Approximate Word Count:" + str(WordCount))
+        print("Approximate Sentence Count:" + str(numSentences1))
+        print("Average Letter Count:" + str(numLetters))
