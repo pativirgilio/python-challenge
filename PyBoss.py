@@ -1,4 +1,3 @@
-main.py
 import os
 csvpath = os.path.join('pyboss1.csv')
 
@@ -98,3 +97,5 @@ with open(csvpath, "w", newline='') as csvfile:
     
     writer.writeheader()
     writer.writerows(new_employee_data)
+    
+print(new_employee_data)
